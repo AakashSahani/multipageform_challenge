@@ -1,0 +1,43 @@
+main {
+	display: grid;
+	border: 1px solid black;
+	height: 100vh;
+	width: 100vw;
+}
+
+header {
+	border: 1px dashed cadetblue;
+}
+
+footer {
+	border: 1px solid salmon;
+}
+
+main > div {
+	border: 2px solid khaki;
+}
+
+@media (min-width: 520px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(100px, auto);
+		border: 1px solid black;
+		height: 100vh;
+		width: 100vw;
+	}
+	header {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	main > div {
+		grid-column: 2/4;
+		grid-row: 9/10;
+	}
+
+	footer {
+		grid-column: 2/4;
+		grid-row: 1/10;
+	}
+}
